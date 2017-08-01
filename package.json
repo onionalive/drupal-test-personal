@@ -4,7 +4,7 @@
   "description": "drupal test site",
   "main": "index.js",
   "scripts": {
-    "presetup": "curl -s https://ftp.drupal.org/files/projects/drupal-8.5.x-dev.tar.gz | tar --exclude 'composer.json' --exclude 'composer.lock' --strip-components=1 -zxvf -",
+    "presetup": "curl -s https://ftp.drupal.org/files/projects/drupal-8.3.5.tar.gz | tar --exclude 'composer.json' --exclude 'composer.lock' --strip-components=1 -zxvf -",
     "setup": "composer install",
     "postsetup": "npm i"
   },

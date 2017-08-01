@@ -11,10 +11,10 @@
 			"drupal/migrate_plus": "^4.0",
 			"drupal/migrate_source_csv": "^2.0",
 			"drupal/paragraphs": "^1.1",
-			"drupal/media_entity": "^1.6" 
+			"drupal/media_entity": "^1.6"
     },
     "replace": {
-        "drupal/core": "^8.5"
+        "drupal/core": "~8.3"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
