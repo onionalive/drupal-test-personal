@@ -1,6 +1,14 @@
-/vendor
-/core/assets/vendor
+# Drupal Specific folders
+#/vendor
+#/core/assets/vendor
 /node_modules
 /modules
-/libraries
-/sites/default/settings.php
+#/libraries
+#/profiles
+/core
+#/sites
+
+
+
+
+# Other
