@@ -7,7 +7,7 @@ You need drush installed
 
 install drupal
 ```shell
-drush dl drupal-7 --select
+drush dl drupal-8 --select
 ```
 
 then
