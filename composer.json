@@ -4,14 +4,14 @@
     "type": "project",
     "license": "GPL-2.0+",
     "require": {
-			"composer/installers": "^1.0.24",
-			"wikimedia/composer-merge-plugin": "~1.4",
-			"drush/drush": "^8.1",
-			"drupal/migrate_tools": "^2.0",
-			"drupal/migrate_plus": "^4.0",
-			"drupal/migrate_source_csv": "^2.0",
-			"drupal/paragraphs": "^1.1",
-			"drupal/media_entity": "^1.6"
+        "composer/installers": "^1.0.24",
+        "wikimedia/composer-merge-plugin": "~1.4",
+        "drush/drush": "^8.1",
+        "drupal/migrate_tools": "^2.0",
+        "drupal/migrate_plus": "^2.0",
+        "drupal/migrate_source_csv": "^2.0",
+        "drupal/paragraphs": "^1.1",
+        "drupal/media_entity": "^1.6"
     },
     "replace": {
         "drupal/core": "~8.3"
