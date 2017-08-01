@@ -3,16 +3,8 @@ Just a small drupal 8 test
 
 Installation
 
-You need drush installed
-
-install drupal
 ```shell
-drush dl drupal-8 --select
+npm run setup
 ```
 
-then
-
-```shell
-composer install
-npm install
-```
+This will download + extract drupal, run composer install, and npm install.
