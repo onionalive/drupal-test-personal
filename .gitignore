@@ -1,12 +1,12 @@
 # Drupal Specific folders
-#/vendor
-#/core/assets/vendor
+/vendor
+/core/assets/vendor
 /node_modules
 /modules
-#/libraries
-#/profiles
+/libraries
+/profiles
 /core
-#/sites
+/sites
 
 
 
