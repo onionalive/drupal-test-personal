@@ -1,0 +1,18 @@
+{
+  "name": "drupal-test-site",
+  "version": "1.0.0",
+  "description": "drupal test site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "present comapny",
+  "license": "ISC",
+  "dependencies": {
+    "dropzone": "^5.1.1"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "webpack": "^3.4.1"
+  }
+}

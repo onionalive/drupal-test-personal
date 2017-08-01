@@ -1,0 +1,6 @@
+/vendor
+/core/assets/vendor
+/node_modules
+/modules
+/libraries
+/sites/default/settings.php
