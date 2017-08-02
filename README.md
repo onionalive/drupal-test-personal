@@ -17,10 +17,10 @@ npm run setup
 This will run composer install and npm install.
 
 After those are completed, go to localhost/REPO_NAME/web and run through the install process.
-The process is similar to a wordpress install, so if you are familiar with that it should be
-fairly straight forward. Enter your DB name, user, and password when prompted.
+The process is similar to a wordpress install, so if you are familiar with that it should be straight forward.
+Enter your DB name, user, and password when prompted.
 
-**NOTE:** because of potential conflict issues with installing modules, you should connect to a local database setup for this project and not one on funbox [or other shared db].
+**NOTE:** *because of potential conflict issues with installing modules, you should connect to a local database setup for this project and not one on funbox [or other shared db]. Drupals core currently does not support this feature. Check [this](https://www.drupal.org/node/1613424) issue.*
 
 ## Adding composer packages
 
@@ -60,7 +60,7 @@ depending on if the package is a development dependency or not.
 modules installed via composer are **not** automatically installed. To install them, go to admin -> extend. Selected all the modules you with to install and click the install button at the bottom. If you need to install a new module, do so with the `composer require` command and not by downloading the file.
 
 ### Setting up your content types
-TODO: discovery
+**TODO**: discovery
 
 initial:
 
@@ -79,3 +79,4 @@ drush cim dev
 ```
 
 This will import the content types into your local site. :)
+**NOTE:** *I have not actually tested this. Need to confirm or remove.*
