@@ -2,8 +2,12 @@
 
 [![Build Status](https://travis-ci.org/drupal-composer/drupal-project.svg?branch=8.x)](https://travis-ci.org/drupal-composer/drupal-project)
 
+# Dependencies
+You will need node/npm and composer installed. The easiest/best way is to have them installed globally.
+
 # Installation
-Drupal is installed in /web folder
+This set-up uses the [drupal-project](https://github.com/drupal-composer/drupal-project) configuration
+This means that Drupal is installed in /web folder, among other tweaks.
 
 To install, clone repo. CD into it and run
 ```shell
