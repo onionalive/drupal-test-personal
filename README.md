@@ -53,3 +53,29 @@ npm i -save-dev <package_name>
 ```
 
 depending on if the package is a development dependency or not.
+
+## Setting Up Drupal
+
+### Module installation
+modules installed via composer are **not** automatically installed. To install them, go to admin -> extend. Selected all the modules you with to install and click the install button at the bottom. If you need to install a new module, do so with the `composer require` command and not by downloading the file.
+
+### Setting up your content types
+TODO: discovery
+
+initial:
+
+Asking someone with the correct settings to export them for you. They can do this by doing the collowing commands
+```shell
+cd PROJECT_ROOT
+drush cex dev
+```
+
+They need to then go to the dev folder and copy/send you all the yml files in that folder relating to content types.
+
+Once you have them, place them in the same folder on your site. (/dev) and run these commands
+```shell
+cd PROJECT_ROOT
+drush cim dev
+```
+
+This will import the content types into your local site. :)
