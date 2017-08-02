@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/drupal-composer/drupal-project.svg?branch=8.x)](https://travis-ci.org/drupal-composer/drupal-project)
 
-#Installation
+# Installation
 Drupal is installed in /web folder
 
 To install, clone repo. CD into it and run
@@ -18,7 +18,7 @@ fairly straight forward. Enter your DB name, user, and password when prompted.
 
 **NOTE:** because of potential conflict issues with installing modules, you should connect to a local database setup for this project and not one on funbox [or other shared db].
 
-##Adding composer packages
+## Adding composer packages
 
 ### Drupal packages
 ```shell
@@ -27,7 +27,7 @@ composer require drupal/<package_name>
 
 This will automatically add the file to web/modules/contrib/
 
-###Third party packages
+### Third party packages
 ```shell
 composer require <package_name>/<package_name>
 ```
@@ -37,7 +37,7 @@ The regular composer install method. Packages installed this way will be added t
 
 *notice the difference being the first parameter in the require package require statement*
 
-###Adding NPM packages
+### Adding NPM packages
 Normal method
 
 ```shell
