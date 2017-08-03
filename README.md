@@ -79,7 +79,10 @@ drush cim dev
 ```
 
 This will import the content types into your local site. :)
+
 **NOTE:** *I have not actually tested this. Need to confirm or remove.*
+
+**NOTE PT2 THE NOTE-ENING:** *Is this actually the best method? Should we have a 'staging' db and just do dumps / pulls from that instead?*
 
 # TODO:
 1. Fix gulp scss, output file is .scss not .css
