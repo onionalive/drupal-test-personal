@@ -50,7 +50,7 @@ gulp.task('theme-info', function () {
 
 /* Stylesheets */
 gulp.task('styles', function () {
-	var out = gulp.src('theme-src/scss/main.scss')
+	var out = gulp.src('theme-src/css/main.scss')
 		.pipe($.cssGlobbing({
 			extensions: ['.scss'],
 		}))
@@ -59,6 +59,10 @@ gulp.task('styles', function () {
 		.on('error', function (e) {
 			$.notify().write(e);
 		})
+		.pipe($.autoprefixer({
+			browsers: ['last 3 versions', 'ie >= 8'],
+			cascade: false,
+		}));
 
 		if (!envProd) {
 			out.pipe($.sourcemaps.write())
