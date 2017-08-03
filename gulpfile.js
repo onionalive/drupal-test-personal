@@ -21,6 +21,7 @@ var dist = 'web/themes/custom/test/';
 gulp.task('clean', function () {
 	rimraf.sync('web/themes/custom/test/css');
 	rimraf.sync('web/themes/custom/test/js');
+	rimraf.sync('web/themes/custom/test/templates');
 });
 
 /* Clear Cache */
