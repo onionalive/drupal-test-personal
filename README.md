@@ -90,3 +90,4 @@ This will import the content types into your local site. :)
 3. Verify esdocs are functional **this is important for this project**
 4. Re-write gulp clean method to not clean entire dist folder. There are some static files there that need to remain. Unless, we could add them to *theme-src*? YML, etc.
 5. Find proper procedure for writing + using drupal page templates (twig)
+6. Solve how we handle databases. funbox? local? etc?
