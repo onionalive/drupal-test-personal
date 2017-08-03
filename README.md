@@ -1,4 +1,4 @@
-# Composer Drupal tempalate
+# Composer Drupal template
 
 [![Build Status](https://travis-ci.org/drupal-composer/drupal-project.svg?branch=8.x)](https://travis-ci.org/drupal-composer/drupal-project)
 
@@ -57,14 +57,14 @@ depending on if the package is a development dependency or not.
 ## Setting Up Drupal
 
 ### Module installation
-modules installed via composer are **not** automatically installed. To install them, go to admin -> extend. Selected all the modules you with to install and click the install button at the bottom. If you need to install a new module, do so with the `composer require` command and not by downloading the file.
+modules installed via composer are **not** automatically installed. To install them, go to admin -> extend. Selected all the modules you with to install and click the install button at the bottom. If you need to install a new module, do so with the `composer require` command and not by downloading the file manually.
 
 ### Setting up your content types
 **TODO**: discovery
 
 initial:
 
-Asking someone with the correct settings to export them for you. They can do this by doing the collowing commands
+Asking someone with the correct settings to export them for you. They can do this by doing the following commands
 ```shell
 cd PROJECT_ROOT
 drush cex dev
