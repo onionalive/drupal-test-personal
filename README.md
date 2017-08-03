@@ -87,6 +87,6 @@ This will import the content types into your local site. :)
 # TODO:
 1. Fix gulp scss, output file is .scss not .css
 2. Ensure all babel, browserify, js stuff is set up correctly
-3. Verify esdocs are functional *this is important for this project*
+3. Verify esdocs are functional **this is important for this project**
 4. We-write gulp clean method to not clean entire dist folder. There are some static files there that need to remain. Unless, we could add them to *theme-src*? YML, etc.
 5. Find proper procedure for writing + using drupal page templates (twig)
