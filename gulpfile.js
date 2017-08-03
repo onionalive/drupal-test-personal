@@ -155,7 +155,7 @@ gulp.task('javascript', ['eslint'], function () {
 	}
 
 	return out.pipe($.buffer())
-		.pipe($.rev())
+		// .pipe($.rev())
 		.pipe(gulp.dest(dist + 'js'))
 		.pipe($.rev.manifest(dist + 'js/manifest.json', {
 			merge: true,
