@@ -10,3 +10,21 @@ For example
 `page--front.html.twig` will override the default core front page template.
 
 More information can be found[here](https://www.drupal.org/node/2354645)
+
+# js/ & css/
+Standard javascript and css folder. Structure is the same as previous projects.
+
+```
+js/
+-modules/
+-main.js
+```
+
+```
+css/
+-base/
+-common/
+-mixins/
+-/etc...
+-main.scss
+```
