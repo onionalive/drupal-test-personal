@@ -64,7 +64,7 @@ modules installed via composer are **not** automatically installed. To install t
 
 initial:
 
-Asking someone with the correct settings to export them for you. They can do this by doing the following commands
+Ask someone with the correct settings to export them for you. They can do this by doing the following commands
 ```shell
 cd PROJECT_ROOT
 drush cex dev
