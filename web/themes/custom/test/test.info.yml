@@ -2,6 +2,14 @@ name: Test
 description: Test theme for Drupal 8
 type: theme
 core: 8.x
+stylesheets-remove:
+  - sites/default/files/css/*.css
 libraries:
   - test/global-css
   - test/global-js
+
+# Define regions
+regions:
+  header: 'Header'
+  content: 'Main content'
+  footer: 'Footer'
