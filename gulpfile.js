@@ -19,7 +19,8 @@ var dist = 'web/themes/custom/test/';
 
 /* Clean */
 gulp.task('clean', function () {
-	rimraf.sync(dist);
+	rimraf.sync('web/themes/custom/test/css');
+	rimraf.sync('web/themes/custom/test/js');
 });
 
 /* Clear Cache */
@@ -49,16 +50,12 @@ gulp.task('theme-info', function () {
 });
 
 /* Stylesheets */
-gulp.task('styles', function () {
+gulp.task('styles', ['print-styles', 'sass-lint'], function () {
 	var out = gulp.src('theme-src/css/main.scss')
 		.pipe($.cssGlobbing({
 			extensions: ['.scss'],
 		}))
-		.pipe($.sourcemaps.init())
-		.on('error', $.sass.logError)
-		.on('error', function (e) {
-			$.notify().write(e);
-		})
+		.pipe($.sass().on('error', $.sass.logError))
 		.pipe($.autoprefixer({
 			browsers: ['last 3 versions', 'ie >= 8'],
 			cascade: false,
@@ -71,15 +68,37 @@ gulp.task('styles', function () {
 			out.pipe($.csso());
 		}
 
-		//out.pipe($.csso());
 		return out.pipe($.rev())
-		.pipe(gulp.dest(dist + 'css'))
-		.pipe($.rev.manifest(dist + 'css/manifest.json', {
-      merge: true,
-      base: '',
-    }))
+			.pipe(gulp.dest(dist + 'css'))
+			.pipe($.rev.manifest(dist + 'css/manifest.json', {
+	      merge: true,
+	      base: '',
+	    }))
 		.pipe(gulp.dest(''));
 })
+
+gulp.task('print-styles', function () {
+	return gulp.src('theme-src/css/print.scss')
+		.pipe($.sass({
+			style: 'expanded',
+		}))
+		.on('error', $.sass.logError)
+		.on('error', function (e) {
+			$.notify().write(e);
+		})
+		.pipe($.autoprefixer({
+			browsers: ['last 3 versions', 'ie >= 8'],
+			cascade: false,
+		}))
+		.pipe($.csso())
+		.pipe($.rev())
+		.pipe(gulp.dest(dist + 'css'))
+		.pipe($.rev.manifest(dist + 'css/manifest.json', {
+			merge: true,
+			base: '',
+		}))
+		.pipe(gulp.dest(''));
+});
 
 /* Lint SASS files */
 gulp.task('sass-lint', function () {
@@ -170,7 +189,7 @@ gulp.task('jsconcat', function () {
 });
 
 /** Livereload */
-gulp.task('watch', ['images', 'copy', 'styles', 'javascript', 'jsconcat'], function () {
+gulp.task('watch', ['clean', 'images', 'copy', 'styles', 'javascript', 'jsconcat'], function () {
 	$.livereload.listen();
 
 	/** Watch for PHP changes */

@@ -1,4 +1,8 @@
 body {
 	color: $c-white !important;
 	background-color: $c-black !important;
+
+	h1 {
+		color: $c-white;
+	}
 }

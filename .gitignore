@@ -24,5 +24,6 @@
 /web/themes/custom/test/css/
 /web/themes/custom/test/js/
 
-# Ignore node stuff
+# Other
 /node_modules/
+/docs/
