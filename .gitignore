@@ -23,6 +23,7 @@
 # Theme Files
 /web/themes/custom/test/css/
 /web/themes/custom/test/js/
+/web/themes/custom/test/templates/
 
 # Other
 /node_modules/
