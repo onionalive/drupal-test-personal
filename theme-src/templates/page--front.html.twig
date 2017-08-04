@@ -1,8 +1,15 @@
 <div class="layout-container">
 
+	{#
+		Two options for headers
+		page.header grabs the `block` header region - this is customised in the CMS under blocks and defined in test.info.yml regions
+		the include method grabs a custom twig file to be used as header.
+	#}
   <header role="banner">
     {{ page.header }}
   </header>
+	{# custom defined header #}
+	{% include '@test/includes/header.html.twig' %}
 
   <main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
@@ -13,10 +20,14 @@
 
   </main>
 
-  {% if page.footer %}
-    <footer role="contentinfo">
-      {{ page.footer }}
-    </footer>
-  {% endif %}
+	{#
+		Two options for footers
+		page.footer grabs the `block` footer region - this is customised in the CMS under blocks and defined in test.info.yml regions
+		the include method grabs a custom twig file to be used as footer.
+	#}
+  <footer role="contentinfo">
+    {{ page.footer }}
+  </footer>
+	{% include '@test/includes/footer.html.twig' %}
 
 </div>{# /.layout-container #}
