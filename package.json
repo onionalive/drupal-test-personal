@@ -4,8 +4,8 @@
   "description": "[![Build Status](https://travis-ci.org/drupal-composer/drupal-project.svg?branch=8.x)](https://travis-ci.org/drupal-composer/drupal-project)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "setup": "composer install && npm i"
+    "setup": "composer install && npm i",
+		"docs": "./node_modules/.bin/esdoc"
   },
   "author": "presco",
   "license": "ISC",
