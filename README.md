@@ -84,6 +84,43 @@ This will import the content types into your local site. :)
 
 **NOTE PT2 THE NOTE-ENING:** *Is this actually the best method? Should we have a 'staging' db and just do dumps / pulls from that instead?*
 
+# Setting up your development environment
+by default, Drupal caches a ton. To see new changes made to twig files, you need to go into admin -> congifuration -> performance and manually clear the cache. This needs to be done every single time you make an update to a twig, etc. file. As you can imagine, this gets annoying and tedious.
+
+**THE SOLUTION**
+To solve this issue, a few files need to be updated.
+
+1. Copy /web/sites/default/example.settings.local.php to /web/sites/default/files.
+	- once done, rename the file to simple settings.local.php
+	- then, uncomment this line `$settings['cache']['bins']['render'] = 'cache.backend.null';`
+
+2. In that same folder, open up settings.php
+	- at the bottom of the file, just before your database settings, uncomment the 3 lines that look something like
+
+```
+	if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+	  include $app_root . '/' . $site_path . '/settings.local.php';
+	}
+```
+
+3. Finally, open up development.services.yml in the sites folder
+	- Add a parameters field (if one does not already exist) and add the following parameters
+
+```
+	twig.config:
+		debug: true
+		auto-reload: true
+		cache: false
+```
+
+*This is a yml file, so indentation matters!*
+
+Once you have done these steps, navigate to `localhost/SITE_URL/web/rebuild.php`.
+Then clear you cache one final time.
+
+and, bam! Go make a change to a twig file and reload, you should see the changes immediately. This helps with theme development, but should NOT ever be pushed to a live production environment.
+
+
 # TODO:
 1. improve gulp scss task
 2. Ensure all babel, browserify, js stuff is set up correctly
