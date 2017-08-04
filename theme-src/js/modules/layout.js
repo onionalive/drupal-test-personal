@@ -1,5 +1,5 @@
 /**
- * This is the main Layout
+ * This is the main Layout class
  */
 class Layout {
 	/**
@@ -18,7 +18,7 @@ class Layout {
 	}
 
 	/**
-	 * consoleLogTest is a method that simple prints out a variable to the console
+	 * consoleLogTest is a method that simply prints out a variable to the console
 	 */
 	consoleLogTest() {
 		console.log(this.consoleLogStatement);
